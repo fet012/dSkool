@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import HomeContent from "./HomeContent";
-import Footer from "./Footer";
+import Footer from "./footer";
 import Header from "./header";
 import AppRouter from "./routes";
 
