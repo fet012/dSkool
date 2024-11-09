@@ -1,0 +1,14 @@
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+input {
+    transition: border-color 0.3s;
+}
+
+input:focus {
+    border-color: #4A90E2;
+    outline: none;
+}

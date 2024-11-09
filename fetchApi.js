@@ -10,6 +10,7 @@ const fetchApi = async (endPoint, method, data) => {
   };
   try {
     const response = await fetch(url, options);
+    console.log("Raw Response:", response); // Log the raw response
     const result = await response.json();
     return result;
   } catch (error) {
@@ -17,5 +18,6 @@ const fetchApi = async (endPoint, method, data) => {
     throw error;
   }
 };
+
 
 export default fetchApi;

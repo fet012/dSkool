@@ -52,10 +52,10 @@ export default function Pricing() {
         />
       </div>
       <div className="mx-auto max-w-4xl text-center">
-        <h2 className="text-base/7 font-semibold text-4xl text-blue-900">
-          OUR PRICING
+        <h2 style={{fontSize: 25}} className="text-base/7 font-semibold text-blue-900">
+         <b> OUR PRICING</b>
         </h2>
-        <p className="mt-2 text-balance text-2xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
+        <p className="mt-2 text-balance text-1xl font-semibold tracking-tight text-gray-900 sm:text-3xl">
           Choose the right plan for you
         </p>
       </div>

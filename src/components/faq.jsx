@@ -17,6 +17,21 @@ export default function Faq() {
       content:
         "Go to the top, click Login, and enter your username and password",
     },
+    {
+      title: "Does the DSKOOL portal support payment of school fees?",
+      content:
+        "NO, the DSKOOL PORTAL does noot support payment of school fees, you should pay to your school account and ask the admin to update your portal",
+    },
+    {
+      title: "Can I register personally?",
+      content:
+        "NO, you cannot register directly/personally on the DSKOOL PORTAL, it's a school management system, so it's meant for schools purchase only, as you will need to purchase a key to create an account as an admin",
+    },
+    {
+      title: "Who is an Admin?",
+      content:
+        "An admin is the user that represents a school and is going to be in charge of the school's students and teachers data,register new users and is going to be in charge of the key. THERE CAN ONLY BE ONE ADMIN ",
+    },
   ];
 
   return (

@@ -3,13 +3,9 @@ import { Link } from "react-router-dom";
 import fetchApi from "../../fetchApi";
 import { useState } from "react";
 export default function Register() {
-  const backHome = () => {
-    navigate("/");
-  };
-  const toLogin = () => {
-    navigate("/login");
-  };
   const navigate = useNavigate();
+  
+
   const [error, setError] = useState(null);
   const [success, setSuccess] = useState(false);
 
@@ -25,6 +21,19 @@ export default function Register() {
       orderId: formData.get("orderId"),
     };
 
+    // FORM VALIDATION
+    if (
+      !userData.name ||
+      !userData.email ||
+      !userData.schoolName ||
+      !userData.username ||
+      !userData.password ||
+      !userData.orderId
+    ) {
+      setError("Please fill all fields");
+      return;
+    }
+
     try {
       const response = await fetchApi("/admin/register", "POST", userData);
       if (response.status === 201) {
@@ -32,6 +41,8 @@ export default function Register() {
         setTimeout(() => {
           navigate("/login");
         }, 2000);
+      } else {
+        setError(response.message);
       }
     } catch (error) {
       setError(error.message);
@@ -56,7 +67,7 @@ export default function Register() {
             <p className="mt-2 text-center text-sm leading-5 text-gray-500 max-w">
               Or
               <Link to="/login">
-                <button className="font-medium text-blue-600 cursor:pointer hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150">
+                <button style={{backgroundColor:"#F3F4F6"}} className=" bg-none text-blue-600 cursor:pointer hover:text-blue-500 focus:outline-none focus:underline transition ease-in-out duration-150">
                   login to your account
                 </button>
               </Link>
@@ -217,44 +228,59 @@ export default function Register() {
                   </div>
                 </div>
                 {error && (
-                <div
-                  className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative"
-                  role="alert"
-                >
-                  <span className="block sm:inline">{error}</span>
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                    className="absolute top-1 right-1 h-6 w-6 text-red-500"
+                  <div
+                    className="bg-red-100 border mt-2 border-red-400 text-red-700 px-4 py-3 rounded relative"
+                    role="alert"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth="2"
-                      d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
-                    />
-                  </svg>
-                </div>
+                    <span className="block sm:inline">{error}</span>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke="currentColor"
+                      className="absolute top-1 right-1 h-6 w-6 text-red-500"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth="2"
+                        d="M12 8v4m0 4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+                      />
+                    </svg>
+                  </div>
                 )}
                 <div className="mt-6">
                   <span className="block flex gap-2 w-full rounded-md shadow-sm">
                     <button
                       type="submit"
-                      onClick={toLogin}
-                      className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                      className="w-30 flex justify-center py-2 px-2 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
                     >
                       Create account
                     </button>
+
+                    <Link to="/login">
+                      <button
+                        className="w-full flex justify-center py-2 px-2 border
+                  border-transparent text-sm font-medium rounded-md text-white
+                  bg-blue-600 hover:bg-blue-500 focus:outline-none
+                  focus:border-indigo-700 focus:shadow-outline-indigo
+                  active:bg-indigo-700 transition duration-150 ease-in-out"
+                      >
+                        Already have an account? Login
+                      </button>
+                    </Link>
+                  </span>
+                  <Link to="/">
                     <button
-                      type="button"
-                      onClick={backHome}
-                      className="w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-indigo active:bg-indigo-700 transition duration-150 ease-in-out"
+                      className="w-full flex justify-center py-2 px-2 mt-2 border
+                  border-transparent text-sm font-medium rounded-md text-white
+                  bg-blue-600 hover:bg-blue-500 focus:outline-none
+                  focus:border-indigo-700 focus:shadow-outline-indigo
+                  active:bg-indigo-700 transition duration-150 ease-in-out"
                     >
                       Go back
                     </button>
-                  </span>
+                  </Link>
                 </div>
               </form>
             </div>
