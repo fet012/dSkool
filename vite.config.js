@@ -4,4 +4,19 @@ import react from "@vitejs/plugin-react";
 // https://vite.dev/config/
 export default defineConfig({
   plugins: [react()],
+  build: {
+    outDir: 'public', // or 'build', 'dist'
+    chunkSizeWarningLimit: 1000, // Increase limit (optional)
+    rollupOptions: {
+      output: {
+        manualChunks(id) {
+          // Customize chunking logic
+          if (id.includes('node_modules')) {
+            return 'vendor';
+          }
+        },
+      },
+    },
+  },
+
 });
