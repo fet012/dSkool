@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   build: {
     outDir: 'public', // or 'build', 'dist'
+    index: 'index.html',
     chunkSizeWarningLimit: 1000, // Increase limit (optional)
     rollupOptions: {
       output: {
