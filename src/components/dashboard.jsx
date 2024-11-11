@@ -7,18 +7,15 @@ import {
   MenuItem,
   MenuItems,
 } from "@headlessui/react";
+import profilePic from '../assets/pexels-photo-614810.webp'
 import { BellIcon } from "@heroicons/react/24/outline";
-// import StudentRegistrationForm from "./adminRegister";
-// import SchoolFeesManagement from "./schoolFeesManagement";
-// import TeacherManagementDashboard from "./teacherManagement";
-// import ResultManagementSystem from "./resultManagement";
-// import ClassManagementSystem from "./classManagement";
+
 import {  Link } from "react-router-dom";
 
 const user = {
   name: "admin",
   email: "admin@gmail.com",
-  imageUrl: "src/assets/pexels-photo-614810.webp",
+  imageUrl: profilePic,
 };
 
 const navigation = [

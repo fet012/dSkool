@@ -1,3 +1,4 @@
+import bgImage from '../assets/istockphoto-1079587192-1024x1024.jpg'
 function Home() {
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
@@ -8,7 +9,7 @@ function Home() {
     <div
       className="h-screen bg-cover bg-center"
       style={{
-        backgroundImage: `url(src/assets/istockphoto-1079587192-1024x1024.jpg)`,
+        backgroundImage: `url(${bgImage})`,
       }}
     >
       <div className="bg-blue-900 bg-opacity-85 h-screen flex text-white lg:p-20 p-5">

@@ -144,7 +144,7 @@ export default function Login() {
                 </button>
               </Link>
             </div>
-            <div>
+            {/* <div>
               {isLoggedIn ? (
                 <Link
                   to="/dashboard"
@@ -155,7 +155,7 @@ export default function Login() {
               ) : (
                 <p className="text-gray-500 ml-6">You are not logged in.</p>
               )}
-            </div>
+            </div> */}
           </form>
         </div>
       </div>
