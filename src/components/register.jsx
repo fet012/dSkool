@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import fetchApi from "../../fetchApi";
+import logo from '../assets/logo.jpg';
 import { useState } from "react";
 export default function Register() {
   const navigate = useNavigate();
@@ -58,7 +59,7 @@ export default function Register() {
           <div className="sm:mx-auto sm:w-full sm:max-w-md">
             <img
               className="mx-auto h-10 w-auto"
-              src="src/assets/logo.jpg"
+              src={logo}
               alt="Workflow"
             />
             <h2 className="mt-6 text-center text-3xl leading-9 font-extrabold text-gray-900">

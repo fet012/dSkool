@@ -8,7 +8,6 @@ import AppRouter from "./routes";
 
 function App() {
   const [showRoute, setShowRoute] = useState(false);
-
   return (
     <div>
       <Header setShowRoute={setShowRoute} />

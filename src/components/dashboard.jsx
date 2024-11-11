@@ -13,7 +13,7 @@ import { BellIcon } from "@heroicons/react/24/outline";
 // import TeacherManagementDashboard from "./teacherManagement";
 // import ResultManagementSystem from "./resultManagement";
 // import ClassManagementSystem from "./classManagement";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import {  Link } from "react-router-dom";
 
 const user = {
   name: "admin",
@@ -27,8 +27,9 @@ const navigation = [
   { name: "Teacher management", href: "/teacherManagement" },
   { name: "Results management", href: "/results" },
   { name: "Class management", href: "/classManagement" },
+  
 ];
-
+import logo from '../assets/logo.jpg';
 const userNavigation = [
   { name: "Your Profile", href: "#" },
   { name: "Settings", href: "#" },
@@ -47,7 +48,7 @@ const Dashboard = () => {
               <div className="flex-shrink-0">
                 <img
                   alt="Your Company"
-                  src="src/assets/logo.jpg"
+                  src={logo}
                   className="h-8 w-8 rounded-full"
                 />
               </div>

@@ -1,3 +1,4 @@
+import logo from "../assets/logo.jpg";
 export default function Footer() {
   return (
     <section className="py-10 bg-gray-900 sm:pt-16 lg:pt-24">
@@ -5,11 +6,7 @@ export default function Footer() {
         <div className="grid grid-cols-2 md:col-span-3 lg:grid-cols-4 gap-y-16 gap-x-12">
           <div className="col-span-2 md:col-span-3 lg:col-span-2 lg:pr-8">
             <div className="flex">
-              <img
-                className="w-auto h-12 rounded-full"
-                src="src/assets/logo.jpg"
-                alt=""
-              />
+              <img className="w-auto h-12 rounded-full" src={logo} alt="" />
               <h1 className="text-white ml-5 mt-1 text-3xl">
                 <b>DSKOOL PORTAL</b>
               </h1>

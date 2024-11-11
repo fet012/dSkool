@@ -17,7 +17,7 @@ const AppRouter = () => {
       <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/" element={<HomeContent />} />
       <Route path="/register" element={<Register />} />
-      <Route path="*" element={<NotFoundPage />} /> {/* Fallback route */}
+      <Route path="*" element={<NotFoundPage />} />{" "}
       <Route path="/adminRegister" element={<StudentRegistrationForm />} />
       <Route path="/feeManagement" element={<SchoolFeesManagement />} />
       <Route

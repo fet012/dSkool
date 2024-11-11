@@ -72,10 +72,10 @@ export default function Contact() {
                       Contact
                     </h3>
                     <p className="text-gray-600 dark:text-slate-400">
-                      Mobile: *************
+                      Mobile: +234 91-221-40041
                     </p>
                     <p className="text-gray-600 dark:text-slate-400">
-                      Mail: *************
+                      Mail: dskool_portal@gmail.com
                     </p>
                   </div>
                 </li>

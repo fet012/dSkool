@@ -20,6 +20,8 @@ import {
 import { ChevronDownIcon } from "@heroicons/react/20/solid";
 
 import { Link } from "react-router-dom";
+import logo from '../assets/logo.jpg';
+
 
 const services = [
   {
@@ -71,7 +73,7 @@ export default function Header({ setShowRoute }) {
           <a href="#" className="-m-1.5 p-1.5">
             <img
               alt=""
-              src="src/assets/logo.jpg"
+              src={logo}
               className="h-12 ml-12 w-auto"
             />
             <span
@@ -199,7 +201,7 @@ export default function Header({ setShowRoute }) {
         <DialogPanel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
           <div className="flex items-center justify-between">
             <a href="#" className="-m-1.5 p-1.5">
-              <img alt="" src="src/assets/logo.jpg" className="h-12 w-auto" />
+              <img alt="" src={logo} className="h-12 w-auto" />
               <span
                 className="
       text-blue-900 
